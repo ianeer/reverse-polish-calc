@@ -1,0 +1,34 @@
+#include <iostream>
+#include <stack>
+#include <string>
+#include <unordered_map>
+
+using namespace std;
+
+class RPNCalculator {
+private:
+    unordered_map<char, int> precedence = {{'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'%', 2}, {'(', 0}};
+
+public:
+    string infixToPrefix(const string& infix) {
+        string prefix;
+        stack<char> opStack;
+
+        // Your code to convert infix to prefix goes here
+
+        return prefix;
+    }
+};
+
+int main() {
+    RPNCalculator calculator;
+    string infixExpression;
+
+    cout << "Enter infix expression: ";
+    getline(cin, infixExpression);
+
+    string prefixExpression = calculator.infixToPrefix(infixExpression);
+    cout << "Prefix expression: " << prefixExpression << endl;
+
+    return 0;
+}
